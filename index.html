@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .panel {
+            width: 100%;
+            max-width: 600px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+        }
+
+        .panel-heading {
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #5a5a5a;
+            text-align: center;
+        }
+
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            flex: 0 0 150px;
+            font-weight: bold;
+            color: #555555;
+            margin-right: 10px;
+        }
+
+        .form-group input {
+            flex: 1;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            padding: 12px 15px;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        .form-group input:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        .form-group input::placeholder {
+            color: #aaa;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-primary:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+    <div class="panel">
+        <div class="panel-heading">
+            <h1>Form</h1>
+        </div>
+        <div class="panel-body">
+            <form action="connect.php" method="post">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" class="form-control" id="title" name="title" placeholder="Enter the title">
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <input type="text" class="form-control" id="description" name="description" placeholder="Enter the description">
+                </div>
+                <div class="form-group">
+                    <label for="rent">Rent</label>
+                    <input type="number" class="form-control" id="rent" name="rent" placeholder="Enter rent amount">
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" class="form-control" id="address" name="address" placeholder="Enter the address">
+                </div>
+                <div class="form-group">
+                    <label for="number_of_rooms">Number of Rooms</label>
+                    <input type="number" class="form-control" id="number_of_rooms" name="number_of_rooms" required placeholder="Enter number of rooms">
+                </div>
+                <div class="form-group">
+                    <label for="contact_info">Contact</label>
+                    <input type="number" class="form-control" id="contact_info" name="contact_info" placeholder="Enter contact info">
+                </div>
+                <input type="submit" class="btn btn-primary" value="Submit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
